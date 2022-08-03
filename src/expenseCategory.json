@@ -1,0 +1,52 @@
+[
+    {
+        "value":"Rent",
+        "label":"Rent"
+    },
+    {
+        "value":"Travel",
+        "label":"Travel"
+    },
+    {
+        "value":"Entertainment",
+        "label":"Entertainment"
+    },
+    {
+        "value":"Food",
+        "label":"Food"
+    },{
+        "value":"Grocery",
+        "label":"Grocery"
+    },{
+        "value":"Shopping",
+        "label":"Shopping"
+    },{
+        "value":"Health Care",
+        "label":"Health Care"
+    },{
+        "value":"Water Bill",
+        "label":"Water Bill"
+    },{
+        "value":"Electricity Bill",
+        "label":"Electricity Bill"
+    },{
+        "value":"Mobile Recharge",
+        "label":"Mobile Recharge"
+    },
+    {
+        "value":"Wifi",
+        "label":"Wifi"
+    },{
+        "value":"Fuel",
+        "label":"Fuel"
+    },{
+        "value":"Personal",
+        "label":"Personal"
+    },{
+        "value":"Gifts",
+        "label":"Gifts"
+    },{
+        "value":"Others",
+        "label":"Others"
+    }
+]
