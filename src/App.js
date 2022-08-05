@@ -24,7 +24,7 @@ class App extends Component {
       this.setState({
         isLoading: false
       })
-    }, 2000)
+    }, 1350)
   }
 
   render() {
@@ -40,7 +40,9 @@ class App extends Component {
                 <Player
                   autoplay
                   loop
-                  src="https://assets8.lottiefiles.com/packages/lf20_7o7lgwke.json"
+                  speed={1.4}
+                  // src="https://assets8.lottiefiles.com/packages/lf20_7o7lgwke.json"
+                  src="/json/loading.json"
                   style={{ width: '200px', background: "transparent" }}
                 >
                 </Player>
