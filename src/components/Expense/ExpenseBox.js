@@ -5,7 +5,7 @@ class ExpenseBox extends Component {
     // console.log(this.props.items);
     return (
       <div>
-        <div key={this.props.items.id} className="flex justify-between items-center ml-5 mr-5 mb-4 bg-white pt-5 pb-5 pr-5 pl-5 rounded-xl" style={{
+        <div key={this.props.items.id} className="flex justify-between items-center ml-5 mr-5 mb-3 bg-white pt-5 pb-5 pr-5 pl-5 rounded-xl" style={{
           boxShadow: 'rgba(60, 64, 67, 0.2) 0px 2px 4px 0px, rgba(60, 64, 67, 0.08) 0px 3px 10px 0px'
         }}>
           <div className='bg-gray-100 p-2 rounded-2xl'>

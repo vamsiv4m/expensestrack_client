@@ -30,10 +30,14 @@ const Profile = () => {
         date: moment(i._id.date).format('MMM Do YY')
       })
     })
-    const wb = utils.book_new();
-    const ws = utils.json_to_sheet(newData);
-    utils.book_append_sheet(wb, ws, "Sheet1");
-    writeFile(wb, `Weeklydata.xlsx`);
+    if (newData.length > 0) {
+      const wb = utils.book_new();
+      const ws = utils.json_to_sheet(newData);
+      utils.book_append_sheet(wb, ws, "Sheet1");
+      writeFile(wb, `Weeklydata.xlsx`);
+    }else{
+      alert("No Data to download")
+    }
   }
 
   const getMonthlyData = async () => {
@@ -70,7 +74,7 @@ const Profile = () => {
   }
 
   const logoutHandler = async () => {
-    const res = await axios.get(`${process.env.REACT_APP_PATH}/logout`,{withCredentials:true});
+    const res = await axios.get(`${process.env.REACT_APP_PATH}/logout`, { withCredentials: true });
     if (res.data.isLogout) {
       navigation('/login', { replace: true });
     }

@@ -29,10 +29,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className=''>
         {
           this.state.isLoading ?
-            <div className='z-50 h-screen w-screen absolute flex justify-center' style={{
+            <div className='z-50 overflow-x-hidden h-screen w-screen absolute flex justify-center' style={{
               backgroundColor: "#000",
               opacity: "0.93 ",
             }}>

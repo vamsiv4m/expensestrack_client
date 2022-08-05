@@ -226,7 +226,7 @@ class Analytics extends Component {
                                     }
                                 }
                             }} className="rounded-xl m-2 p-2 md:pb-7" style={{ backgroundColor: "white", boxShadow: 'rgba(60, 64, 67, 0.2) 0px 1px 4px 1px, rgba(60, 64, 67, 0.08) 0px 3px 10px 0px' }} />
-                        </> : <p className='w-full text-center font-medium h-full items-center justify-center flex'>No Data to visualize</p>
+                        </> : <p className='w-full text-center font-medium h-[60px] items-center justify-center flex'>No Data to visualize</p>
                     }
                 </div>
             </div>

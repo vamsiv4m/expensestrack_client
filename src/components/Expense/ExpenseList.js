@@ -27,7 +27,7 @@ export default class ExpenseList extends Component {
                                     })}
                                 </> :
                                 <motion.p initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 5 }} exit={{ opacity: 0, y: -10 }} className='font-semibold text-base flex justify-center text-slate-600' style={{ marginTop: visible ? "140px" : "130px" }}>
-                                    No Expenses Today
+                                    No Expenses
                                 </motion.p>
                         }
                     </div>
