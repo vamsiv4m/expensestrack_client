@@ -7,7 +7,7 @@ import ViewAll from './components/Expense/ViewAll';
 import { Analytic } from './components/Expense/Analytics';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
-import UserContext, { AuthContext } from './components/context/AuthContext';
+import UserContext from './components/context/AuthContext';
 import { Player } from '@lottiefiles/react-lottie-player';
 import Profile from './components/Expense/Profile';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
