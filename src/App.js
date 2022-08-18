@@ -33,10 +33,10 @@ class App extends Component {
       <div className=''>
         {
           // this.state.isLoading ?
-          !this.context.userData.isAuthorized ?
+          this.context.isLoading ?
             <div className='z-50 overflow-x-hidden h-screen w-screen absolute flex justify-center' style={{
               backgroundColor: "#000",
-              opacity: "0.93 ",
+              opacity: "0.93",
             }}>
               <div className='w-full h-[76%] flex flex-col justify-center items-center'>
                 <Player
