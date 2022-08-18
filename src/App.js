@@ -7,7 +7,7 @@ import ViewAll from './components/Expense/ViewAll';
 import { Analytic } from './components/Expense/Analytics';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
-import { AuthContext } from './components/context/AuthContext';
+import UserContext, { AuthContext } from './components/context/AuthContext';
 import { Player } from '@lottiefiles/react-lottie-player';
 import Profile from './components/Expense/Profile';
 import ForgotPassword from './components/ForgotPassword/ForgotPassword';
@@ -20,6 +20,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log(this.context.userData);
     setTimeout(() => {
       this.setState({
         isLoading: false
@@ -31,7 +32,8 @@ class App extends Component {
     return (
       <div className=''>
         {
-          this.state.isLoading ?
+          // this.state.isLoading ?
+          !this.context.userData.isAuthorized ?
             <div className='z-50 overflow-x-hidden h-screen w-screen absolute flex justify-center' style={{
               backgroundColor: "#000",
               opacity: "0.93 ",
@@ -52,21 +54,20 @@ class App extends Component {
             : ""
         }
         <div className='' >
-          <AuthContext>
-            <Routes>
-              <Route path='login' element={<Login />} />
-              <Route path='signUp' element={<SignUp />} />
-              <Route path='forgotpassword' element={<ForgotPassword />} />
-              <Route path="expense_tracker" element={<NavBar />}>
-                <Route index element={<ExpenseTracker />} />
-                <Route path='viewAll' element={<ViewAll />} />
-                <Route path='analytics' element={<Analytic />} />
-                <Route path='profile' element={<Profile />} />
-                <Route path='viewall' element={<ViewAll />} />
-              </Route>
-              <Route path='*' element={<Login />} />
-            </Routes>
-          </AuthContext>
+
+          <Routes>
+            <Route path='login' element={<Login />} />
+            <Route path='signUp' element={<SignUp />} />
+            <Route path='forgotpassword' element={<ForgotPassword />} />
+            <Route path="expense_tracker" element={<NavBar />}>
+              <Route index element={<ExpenseTracker />} />
+              <Route path='viewAll' element={<ViewAll />} />
+              <Route path='analytics' element={<Analytic />} />
+              <Route path='profile' element={<Profile />} />
+              <Route path='viewall' element={<ViewAll />} />
+            </Route>
+            <Route path='*' element={<Login />} />
+          </Routes>
         </div>
       </div>
     );
@@ -74,3 +75,5 @@ class App extends Component {
 }
 
 export default App;
+
+App.contextType = UserContext;
